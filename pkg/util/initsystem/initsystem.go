@@ -23,7 +23,6 @@ import (
 )
 
 type InitSystem interface {
-
 	// ServiceExists ensures the service is defined for this init system.
 	ServiceExists(service string) bool
 

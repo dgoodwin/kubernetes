@@ -49,7 +49,6 @@ type ServiceCheck struct {
 }
 
 func (sc ServiceCheck) Check() (warnings, errors []error) {
-
 	initSystem := initsystem.GetInitSystem()
 	if initSystem == nil {
 		return []error{fmt.Errorf("no supported init system detected, skipping service checks for %s", sc.service)}, nil
